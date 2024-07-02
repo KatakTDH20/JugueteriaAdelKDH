@@ -1,0 +1,305 @@
+@font-face {
+  font-family: 'SuperSquad';
+  src: url('../fonts/SuperSquad.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ChemyRetro';
+  src: url('../fonts/ChemyRetro.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Official';
+  src: url('../fonts/Official.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  padding: 10px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-right a {
+  margin-left: 25px; 
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Official', cursive;
+  font-size: 1rem;
+}
+
+a:hover {
+  font-weight: 600;
+}  
+  
+p{font-size: 1.1rem;
+font-family: 'Official';}
+
+ul, li{list-style: none;}
+
+.cta{padding: 1.5em 0;}
+
+.cta-a{
+  color: #FBF5FD;
+  font-family: 'Official';
+  font-weight: bold;
+  font-size: 1.2em;
+  background-color: #3D1D5E;
+  padding: .5rem 1rem;
+  border-radius: 2rem;
+}
+  
+h1{font-size: 3em;
+  font-family: 'SuperSquad';}
+h2{font-size: 2.5em;
+  font-family: 'ChemyRetro';}
+h3{font-size: 2.2em;
+  font-family: 'Official';}
+  
+/*banner 1*/
+#banner1 {
+  background-image: url("../img/bg1.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  color: #fff;
+  background-color: #191919;
+  text-align: center;
+}
+  
+.wrap-banner1 {
+  max-width: 600px;
+  color: #fff;
+  padding: 15%;
+}
+
+/*titulo*/
+.title{
+  display: flex;
+  justify-content: center;
+  margin: 3rem 1rem;
+}
+
+.title h2{
+  color: #3D1D5E;
+}
+  
+/*CARD*/
+#listProductos{
+  background-color: #727E8C;
+  padding: 0;
+  margin: 0;
+}
+
+#listProductos .title{
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.productosList {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  padding: 0;
+  margin: 0;
+}
+  
+.box {
+  margin: 10px;
+  position: relative;
+  width: 350px;/*PARA ADAPTAR*/
+  height: 480px;
+  background: #191919;
+  transition: 0.5s;
+  overflow: hidden;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+ }
+  
+.box .imgBx {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  }
+  
+.box .content {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+  
+.box h3 {
+  color: #fff;
+  font-weight: 300;
+  line-height: 1.2em;
+  text-align: center;
+}
+  
+.box span {
+  font-size: 0.8em;
+  opacity: 0.5;
+  text-align: center;
+}
+  
+.imgFit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  
+.productosList:hover > :not(:hover) {
+  opacity: 0.3;
+}
+  
+/*banner INFO*/
+#bannerInfo {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+  
+#bannerInfo .title{
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.bannerInfo-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.dosColumnas{
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+  
+.imgDosColumnas{
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+.imgDosColumnas img{
+  width: 350px;
+  justify-content: center;
+  align-items: center;
+}
+  
+.text h3{
+  padding: 2rem 0;
+  color:#3D1D5E;
+}
+  
+.text p{
+  padding-bottom: 1rem;
+  color: #191919;
+}
+
+.text label{
+  color: #FBF5FD;
+}
+
+/*formulario*/
+ #bannerInfof{
+  background-color: #727e8c;
+  padding: 3rem 0;
+}
+  
+.form input, .form textarea{
+  display: flex;
+  width: 100%;
+  line-height: 1.75rem;
+  border: 1.5px solid #fff;
+  border-radius: 2rem;
+}
+  
+.form textarea{
+  min-height: 200px;
+}
+  
+input[type="submit"]{
+  border: 0;
+  display: inline;
+  cursor: pointer;
+}
+  
+/*Footer*/
+.footer{
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #3D1D5E;
+}
+  
+.menu-footer{
+  padding: 1rem 0;
+}
+  
+.rrss ul{
+  display: flex;
+  justify-content: center;
+}
+  
+.social-logo{
+  max-width: 75px;
+  width: 100%;
+  padding: 1rem;
+}
+  
+.credits{
+  display: flex;
+  justify-content: center;
+  color:#FBF5FD
+}
